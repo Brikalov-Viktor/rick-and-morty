@@ -4,14 +4,14 @@ import { useRouter } from 'next/router';
 import Filter from '@/components/CharactersFilter/Filter';
 import CharactersList from '@/components/CharactersList/CharactersList';
 
-import { getObjFromKeysArray } from '@/app/helpers';
+import { pickFieldsFromObjByKeys } from '@/app/helpers';
 import { filterNames } from '@/app/consts';
 import StyledHome from './HomePage.style';
 
 const HomePage = ({ loading, data }) => {
   const router = useRouter();
   const [filter, setFilter] =
-    useState(getObjFromKeysArray(filterNames, router.query));
+    useState(pickFieldsFromObjByKeys(filterNames, router.query));
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;

@@ -4,7 +4,7 @@ import client from '../apolloClient';
 import HomePage from '@/components/HomePage/HomePage';
 
 import { filterNames } from '@/app/consts';
-import { getObjFromKeysArray } from '@/app/helpers';
+import { pickFieldsFromObjByKeys } from '@/app/helpers';
 import { GET_CHARACTERS } from '@/app/queries';
 
 const App = ({ res }) => {
@@ -19,7 +19,7 @@ const App = ({ res }) => {
 }
 
 export const getServerSideProps = async (context) => {
-  const filter = getObjFromKeysArray(filterNames, context.query);
+  const filter = pickFieldsFromObjByKeys(filterNames, context.query);
   const res = await client.query({
     query: GET_CHARACTERS,
     variables: { filter },
