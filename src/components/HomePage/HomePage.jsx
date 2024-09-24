@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import Filter from '@/components/CharactersFilter/Filter';
 import CharactersList from '@/components/CharactersList/CharactersList';
 
-import { pickFieldsFromObjByKeys } from '@/app/helpers';
-import { filterNames } from '@/app/consts';
+import { pickFieldsFromObjByKeys } from '@/helpers';
+import { filterNames } from '@/consts';
 import StyledHome from './HomePage.style';
 
 const HomePage = ({ loading, data }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { filterNames } from '@/app/consts';
+import { filterNames } from '@/consts';
 import StyledItem from './CharacterItem.style';
 
 const CharacterItem = ({ character }) => {

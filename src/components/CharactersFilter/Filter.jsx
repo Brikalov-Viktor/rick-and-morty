@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { filtersList } from '@/app/consts';
+import { filtersList } from '@/consts';
 import StyledFilter from './Filter.style';
 
 const Filter = ({ filter, handleFilterChange }) => {

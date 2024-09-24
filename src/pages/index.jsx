@@ -4,9 +4,9 @@ import client from '../apolloClient';
 import HomePage from '@/components/HomePage/HomePage';
 // import StyledComponentsRegistry from '@/components/registry.js';
 
-import { filterNames } from '@/app/consts';
-import { pickFieldsFromObjByKeys } from '@/app/helpers';
-import { GET_CHARACTERS } from '@/app/queries';
+import { filterNames } from '@/consts';
+import { pickFieldsFromObjByKeys } from '@/helpers';
+import { GET_CHARACTERS } from '@/queries';
 
 const App = ({ res }) => {
   const { data, loading } = res;
