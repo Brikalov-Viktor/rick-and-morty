@@ -2,6 +2,7 @@ import React from 'react';
 
 import client from '../apolloClient';
 import HomePage from '@/components/HomePage/HomePage';
+// import StyledComponentsRegistry from '@/components/registry.js';
 
 import { filterNames } from '@/app/consts';
 import { pickFieldsFromObjByKeys } from '@/app/helpers';
@@ -11,10 +12,12 @@ const App = ({ res }) => {
   const { data, loading } = res;
 
   return (
-    <HomePage
-      data={data}
-      loading={loading}
-    />
+    // <StyledComponentsRegistry>
+      <HomePage
+        data={data}
+        loading={loading}
+      />
+    // </StyledComponentsRegistry>
 	);
 }
 
