@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 
 import Filter from '@/components/CharactersFilter/Filter';
@@ -10,16 +10,10 @@ import StyledHome from './HomePage.style';
 
 const HomePage = ({ loading, data }) => {
   const router = useRouter();
-  const [filter, setFilter] =
-    useState(pickFieldsFromObjByKeys(filterNames, router.query));
+  const filter = pickFieldsFromObjByKeys(filterNames, router.query);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
-    
-    setFilter(prev => ({
-      ...prev,
-      [name]: value,
-    }));
     const newQuery = {
       ...router.query,
       [name]: value,
